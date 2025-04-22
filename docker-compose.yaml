@@ -1,9 +1,9 @@
 name: opnsense-ip-notifier
 
 services:
-  notifier:
+  runner:
     build: ./
-    restart: no
+    restart: on-failure
     env_file:
       - notify.env
     volumes:
