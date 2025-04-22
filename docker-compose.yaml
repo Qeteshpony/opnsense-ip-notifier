@@ -1,0 +1,10 @@
+name: opnsense-ip-notifier
+
+services:
+  notifier:
+    build: ./
+    restart: no
+    env_file:
+      - notify.env
+    volumes:
+      - ./data:/data
